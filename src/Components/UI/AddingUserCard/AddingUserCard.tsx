@@ -20,6 +20,7 @@ interface IModalProp {
 
 const AddingUserCard: React.FC<IProps> = (props: IProps) => {
   const { usernameInputProp, ageInputProp, onAddNewUser } = props;
+
   const [showModal, setShowModal] = useState<boolean>(false);
   const [userInput, setUserInput] = useState<IUserInput>({
     usernameInputValue: "",
@@ -66,6 +67,10 @@ const AddingUserCard: React.FC<IProps> = (props: IProps) => {
     onAddNewUser({
       name: userInput.usernameInputValue,
       age: userInput.ageInputValue,
+    });
+    setUserInput({
+      usernameInputValue: "",
+      ageInputValue: "",
     });
   };
 

@@ -7,3 +7,6 @@
   font-weight: bold;
   width: 7rem;
 }
+.button:hover {
+  background-color: red;
+}
