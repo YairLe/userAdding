@@ -4,7 +4,7 @@ import React, { ComponentProps } from "react";
 
 import { Story, Meta } from "@storybook/react";
 
-import Button from "../Components/Button/Button";
+import Button from "../Components/UI/Button/Button";
 
 //👇 This default export determines where your story goes in the story list
 export default {
@@ -17,11 +17,8 @@ const Template: Story<ComponentProps<typeof Button>> = (args) => (
   <Button {...args} />
 );
 
-export const StoryButton = Template.bind({});
-StoryButton.args = {
+export const AddUser = Template.bind({});
+AddUser.args = {
   /*👇 The args you need here will depend on your component */
   buttonLabel: "hey",
-  ButtonClick: () => {
-    console.log("hey");
-  },
 };

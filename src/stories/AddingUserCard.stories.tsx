@@ -4,20 +4,20 @@ import React, { ComponentProps } from "react";
 
 import { Story, Meta } from "@storybook/react";
 
-import Card from "../Components/UI/Card/Card";
+import AddingUserCard from "../Components/UI/AddingUserCard/AddingUserCard";
 
 //👇 This default export determines where your story goes in the story list
 export default {
-  title: "Components/Card",
-  component: Card,
+  title: "Components/AddingUserCard",
+  component: AddingUserCard,
 } as Meta;
 
 //👇 We create a “template” of how args map to rendering
-const Template: Story<ComponentProps<typeof Card>> = (args) => (
-  <Card {...args} />
+const Template: Story<ComponentProps<typeof AddingUserCard>> = (args) => (
+  <AddingUserCard {...args} />
 );
 
-export const StoryCard = Template.bind({});
-StoryCard.args = {
+export const AddUserCard = Template.bind({});
+AddUserCard.args = {
   /*👇 The args you need here will depend on your component */
 };

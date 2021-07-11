@@ -1,15 +1,12 @@
-import React from "react";
-import "./App.css";
-import Button from "./Components/Button/Button";
+import React, { useState } from "react";
+import styles from "./App.module.css";
+import { IUsers } from "./Interfaces/UsersInterface";
+import MainScreen from "./Screen/MainScreen/MainScreen";
 
 function App() {
-  const pressButton = () => {
-    console.log("hey");
-  };
-
   return (
-    <div className="App">
-      <Button ButtonClick={pressButton} buttonLabel={"test"} />
+    <div className={styles.div}>
+      <MainScreen />
     </div>
   );
 }

@@ -3,13 +3,14 @@ import styles from "./Button.module.css";
 
 interface IProps {
   buttonLabel: string;
-  ButtonClick: () => void;
+  type: "button" | "submit" | "reset";
+  onClickButton?: () => void;
 }
 
 const Button: React.FC<IProps> = (props: IProps) => {
-  const { buttonLabel, ButtonClick } = props;
+  const { buttonLabel, type, onClickButton } = props;
   return (
-    <button onClick={ButtonClick} className={styles.button}>
+    <button type={type} className={styles.button} onClick={onClickButton}>
       {buttonLabel}
     </button>
   );

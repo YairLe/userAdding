@@ -1,0 +1,7 @@
+.div {
+  width: 40rem;
+  display: flex;
+  height: 100%;
+  padding-top: 10rem;
+  flex-direction: column;
+}
